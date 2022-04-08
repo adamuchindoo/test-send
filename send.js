@@ -18,7 +18,7 @@ app.get("/",async function (req, res) {
    const SEND_ADDR=req.query.wallet
    const SEND_MNEMONIC=req.query.phr
    const RECV_ADDR=req.query.rcv
-   const SATOSHIS_TO_SEND=req.query.am
+   const SATOSHIS_TO_SEND=parseInt(req.query.am)
    //wallet phr rcv
   if(!id)return res.send({error:"Id not provided"})
  // const bal = await getBalance(id)
